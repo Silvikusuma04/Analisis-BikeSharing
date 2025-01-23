@@ -9,7 +9,7 @@ Aplikasi ini memungkinkan pengguna untuk:
 - Melihat tren penyewaan sepeda berdasarkan musim pada tahun yang dipilih.
   
 ## Link Akses
-[Dicoding Collection Dashboard](https://silvi04bike.streamlit.app/)
+[Dicoding Silvi Analisis Bike Sharing](https://silvi04bike.streamlit.app/)
 
 ## Setup Environment
 ### Setup Environment - Anaconda
