@@ -1,6 +1,4 @@
-# Dicoding Collection Dashboard ✨
-
-Aplikasi analisis penyewaan sepeda ini dikembangkan untuk **Submission Course Belajar Analisis Data dengan Python** di Dicoding.
+Dashboard Analisis penyewaan sepeda ini dikembangkan untuk **Submission Course Belajar Analisis Data dengan Python** di Dicoding.
 
 ## Deskripsi
 Aplikasi ini memungkinkan pengguna untuk:
