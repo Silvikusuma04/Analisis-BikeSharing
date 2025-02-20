@@ -10,25 +10,19 @@ day_df = pd.read_csv("day.csv")
 hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 
-# Display logo
 st.sidebar.image("logo/sepeda.jpg")
 st.sidebar.title("Bike Sharing Dashboard")
-
-st.sidebar.title("Filter Options")
-selected_year = st.sidebar.selectbox("Select Year", options=[2011, 2012])
-selected_weather = st.sidebar.selectbox("Select Weather Condition", options=[1, 2, 3, 4], 
+st.sidebar.title("Filter Visualisasi")
+selected_year = st.sidebar.selectbox("Pilih Tahun", options=[2011, 2012])
+selected_weather = st.sidebar.selectbox("Pilih Kondisi Cuaca", options=[1, 2, 3, 4], 
                                         format_func=lambda x: {
                                             1: ' (1) Clear, Few clouds, Partly cloudy',
                                             2: ' (2) Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist',
                                             3: ' (3) Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds',
                                             4: ' (4) Heavy Rain + Ice Pellets + Thunderstorm + Mist, Snow + Fog'
                                         }[x])
-selected_season = st.sidebar.selectbox("Select Season", options=[1, 2, 3, 4], 
+selected_season = st.sidebar.selectbox("Pilih Musim", options=[1, 2, 3, 4], 
                                       format_func=lambda x: {1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'}[x])
-
-# Filter data based on selected options
-day_df['dteday'] = pd.to_datetime(day_df['dteday'])
-hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
 # Filter by year
 filtered_day_df = day_df[day_df['dteday'].dt.year == selected_year]
 filtered_hour_df = hour_df[hour_df['dteday'].dt.year == selected_year]
@@ -49,7 +43,7 @@ ax.axis('equal')
 st.pyplot(fig)
 
 # 2. Pengaruh hari kerja terhadap jumlah penyewaan sepeda
-st.subheader("Pengaruh Hari Kerja Terhadap Jumlah Penyewaan Sepeda")
+st.subheader("Presentase Penyewa Berdasarkan Working Day")
 combined_df = pd.merge(filtered_hour_df, filtered_day_df, on='dteday', suffixes=('_hour', '_day'))
 workday_counts = combined_df.groupby('workingday_day')[['registered_day', 'casual_day']].sum()
 total_workday = workday_counts.loc[1, 'registered_day'] + workday_counts.loc[1, 'casual_day']
@@ -85,7 +79,7 @@ ax.legend()
 st.pyplot(fig)
 
 # 5. Total dan proporsi penyewaan sepeda pada hari kerja dan hari libur
-st.subheader("Total dan Proporsi Penyewaan Sepeda pada Hari Kerja dan Hari Libur")
+st.subheader("Penyewaan Sepeda pada Hari Kerja dan Hari Libur")
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.bar(workday_counts.index, workday_counts['registered_day'], label='Registered', color='#1f77b4')
 ax.bar(workday_counts.index, workday_counts['casual_day'], bottom=workday_counts['registered_day'], label='Casual', color='#ff7f0e')
@@ -124,7 +118,7 @@ st.pyplot(fig)
 
 # 7. Jumlah penyewaan berdasarkan cuaca dan jenis hari 
 cluster_counts2 = filtered_hour_df.groupby(['weathersit', 'workingday'])['cnt'].sum().reset_index()
-st.subheader("Jumlah Penyewaan Berdasarkan Cuaca dan Jenis Hari")
+st.subheader("Jumlah Penyewaan Berdasarkan Cuaca dan Working Day")
 fig, ax = plt.subplots(figsize=(10, 6))
 sns.barplot(x='weathersit', y='cnt', hue='workingday', data=cluster_counts2, ax=ax)
 ax.set_xlabel('Kondisi Cuaca')
