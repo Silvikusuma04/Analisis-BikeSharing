@@ -1,16 +1,25 @@
-# Dicoding Collection Dashboard ✨
+Dashboard Analisis penyewaan sepeda ini dikembangkan untuk **Submission Course Belajar Analisis Data dengan Python** di Dicoding.
 
-## Setup Environment - Anaconda
-```
+## Deskripsi
+Aplikasi ini memungkinkan pengguna untuk:
+- Melihat persentase penyewaan sepeda antara pengguna terdaftar dan casual.
+- Menganalisis pengaruh hari kerja terhadap jumlah penyewaan sepeda.
+- Melihat tren penyewaan sepeda berdasarkan musim pada tahun yang dipilih.
+  
+## Link Akses
+[Dicoding Silvi Analisis Bike Sharing](https://silvi04bike.streamlit.app/)
+
+## Setup Environment
+### Setup Environment - Anaconda
+```bash
 conda activate main-ds
+<<<<<<< HEAD
 ```
 ## Setup Environment - Shell/Terminal
 ```
 cd
+=======
+>>>>>>> 7d28c78b67be61608621c379585743481d07f4cc
 pip install -r requirements.txt
-```
-
-## Run steamlit app
-```
 streamlit run streamlit.py
-```
+
