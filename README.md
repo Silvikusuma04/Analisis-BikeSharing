@@ -11,15 +11,13 @@ Aplikasi ini memungkinkan pengguna untuk:
 
 ## Setup Environment
 ### Setup Environment - Anaconda
-```bash
+```
 conda activate main-ds
-<<<<<<< HEAD
 ```
 ## Setup Environment - Shell/Terminal
 ```
 cd
-=======
->>>>>>> 7d28c78b67be61608621c379585743481d07f4cc
 pip install -r requirements.txt
+```
 streamlit run streamlit.py
 
