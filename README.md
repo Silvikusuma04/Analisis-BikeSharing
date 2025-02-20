@@ -18,6 +18,6 @@ conda activate main-ds
 ```
 cd
 pip install -r requirements.txt
-```
 streamlit run streamlit.py
+```
 
