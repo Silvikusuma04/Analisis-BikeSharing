@@ -6,7 +6,7 @@ conda activate main-ds
 ```
 ## Setup Environment - Shell/Terminal
 ```
-cd D:\dicoding
+cd
 pip install -r requirements.txt
 ```
 
