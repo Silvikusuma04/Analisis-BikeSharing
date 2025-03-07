@@ -1,13 +1,10 @@
 Dashboard Analisis penyewaan sepeda ini dikembangkan untuk **Submission Course Belajar Analisis Data dengan Python** di Dicoding.
 
 ## Deskripsi
-Aplikasi ini memungkinkan pengguna untuk:
-- Melihat persentase penyewaan sepeda antara pengguna terdaftar dan casual.
-- Menganalisis pengaruh hari kerja terhadap jumlah penyewaan sepeda.
-- Melihat tren penyewaan sepeda berdasarkan musim pada tahun yang dipilih.
+ini adalah analisis data penyewaan sepeda dengan dashboard yang di deploy menggunakan streamlit
   
 ## Link Akses
-[Dicoding Silvi Analisis Bike Sharing](https://silvi04bike.streamlit.app/)
+[Dicoding Silvi Analisis Bike Sharing](https://data-analysis-silvi.streamlit.app/)
 
 ## Setup Environment
 ### Setup Environment - Anaconda
