@@ -10,7 +10,7 @@ day_df = pd.read_csv("day.csv")
 hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 
-st.sidebar.image("logo/sepeda.jpg")
+st.sidebar.image("sepeda.jpg")
 st.sidebar.title("Bike Sharing Dashboard")
 st.sidebar.title("Filter Visualisasi")
 selected_year = st.sidebar.selectbox("Pilih Tahun", options=[2011, 2012])
