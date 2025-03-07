@@ -1,2 +1,2 @@
-https://silvi04bike.streamlit.app/ 
+https://data-analysis-silvi.streamlit.app/
 link deploy streamlit
